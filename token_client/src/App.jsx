@@ -13,6 +13,7 @@ function App() {
   const [contractAPI, setContractAPI] = useState(null);
   const [provider, setProvider] = useState(null);
   const [signer, setSigner] = useState(null);
+  // new diles
   const [address, setAddress] = useState(null);
   const [balance, setBalance] = useState(0);
   const [recipient, setRecipient] = useState("");
