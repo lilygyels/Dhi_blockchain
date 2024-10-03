@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('./assets/bg.png'); /* Add your image path here */
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  margin: 0;
+  /* opacity: 1; */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Card Container */
+.card {
+  background-color: #ffffff; /* White background for the card */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 30px; /* Inner padding */
+  width: 100%; /* Full width */
+  max-width: 800px; /* Fixed maximum width for the card */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Navbar */
+.navbar {
+  background-color: #d7beeb; /* Dark background */
+  padding: 10px;
+  color: rgb(29, 29, 29);
+  text-align: center; /* Center text */
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 20px; /* Space below navbar */
+}
+
+/* Navbar Title */
+.navbar h1 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.5em; /* Increase font size */
+}
+
+/* Account Section */
+.account {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #333;
+  text-align: center; /* Centered text */
+}
+
+/* Token Details */
+.tokenName,
+.tokenDescrip,
+.tokenSymbol {
+  font-size: 1em;
+  color: #555;
+  text-align: center; /* Centered text */
+}
+
+/* Balance */
+.balance {
+  font-size: 1em;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center; /* Centered text */
+}
+
+/* Transfer Section */
+.transfer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  gap: 16px; /* Space between inputs */
+}
+
+/* Inputs */
+.recipient,
+.amount {
+  width: 100%; /* Full width for inputs */
+  padding: 12px; /* Inner padding */
+  border: 1px solid #ced4da; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  transition: border-color 0.3s;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Centering the input container */
+.input-container {
+  display: flex;
+  justify-content: center; /* Center inputs horizontally */
+  gap: 16px; /* Space between inputs */
+}
+
+/* Focus State */
+.recipient:focus,
+.amount:focus {
+  border-color: #738aa3; /* Blue border on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Button */
+.btn {
+  background-color: #383838; /* Primary button color */
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 50%; /* Full width button */
+  text-align: center; /* Center text inside button */
+}
+
+.btn:hover {
+  background-color: #000000; 
+}
+
+.btn:disabled {
+  background-color: #000000; /* Grey when disabled */
+  cursor: not-allowed; /* Not allowed cursor */
+}
+
+/* Loading Animation */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Blur effect */
+  z-index: 999; /* Ensure it is on top of other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  border-top: 2px solid #f3f3f3;
+  border-right: 2px solid #f3f3f3;
+  border-bottom: 2px solid #f3f3f3;
+  border-left: 2px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
